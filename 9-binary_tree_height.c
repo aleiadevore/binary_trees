@@ -8,15 +8,15 @@
 
 size_t height_finder(const binary_tree_t *tree)
 {
-    size_t left, right;
+	size_t left, right;
 
-    if (tree == NULL)
-        return (0);
-    left = height_finder(tree->left);
-    right = height_finder(tree->right);
-    if (left > right)
+	if (tree == NULL)
+		return (0);
+	left = height_finder(tree->left);
+	right = height_finder(tree->right);
+	if (left > right)
 	return (left + 1);
-    else
+	else
 	return (right + 1);
 }
 
@@ -28,11 +28,11 @@ size_t height_finder(const binary_tree_t *tree)
 
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-    size_t total;
+	size_t total;
 
-    total = height_finder(tree);
+	total = height_finder(tree);
 
-    if (total == 0)
-        return (total);
-    return (total - 1);
+	if (total == 0)
+		return (total);
+	return (total - 1);
 }
